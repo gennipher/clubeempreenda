@@ -1,0 +1,57 @@
+.form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 20px;
+}
+
+.formHorizontal {
+          display: flex;
+          width: 100%;
+}
+
+.alignCenter {
+          display: flex;
+          margin-left: 100px;
+          margin-top: 20px;
+}
+
+.alignVertical {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+}
+
+.alignHorizontal {
+          display: flex;
+}
+
+.title {
+          font-size: 25px;
+          font-weight: bold;
+          padding: 20px 0px 0px 10px;
+}
+
+.formGroup {
+          padding-bottom: 20px;
+}
+
+.btnColor {
+          background-color: #69ABBA !important;
+          border-color: #69ABBA !important;
+}
+
+.textDecoration {
+          text-decoration: none;
+          padding-left: -10px !important;
+}
+
+.formControlWidth {
+          width: 40vh !important;
+}
+
+.esqueciSenha {
+          text-decoration: none;
+          font-style: italic;
+          color: black;
+}

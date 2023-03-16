@@ -9,8 +9,8 @@ export default () => {
         <Navbar.Brand className={styles.navbarBrand} href="/">Clube Empreenda</Navbar.Brand>
           <Nav>
             <Nav.Link href="/sobre" >Sobre nós</Nav.Link>
-            <Nav.Link href="/sobre">Entre</Nav.Link>
-            <Nav.Link href="/sobre">Crie sua conta</Nav.Link>
+            <Nav.Link href="/login">Entre</Nav.Link>
+            <Nav.Link href="/cadastro">Crie sua conta</Nav.Link>
           </Nav>
       </Container>
     </Navbar>

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.jsx";
 const Home = () => {
   return (
     <div className="Home">
-      <Navbar />            
+      <Navbar />
     </div>
   );
 };
