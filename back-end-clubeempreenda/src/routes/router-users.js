@@ -1,0 +1,25 @@
+const express = require('express')
+const router = express.Router()
+const SecretFront = require('../middleware/secretFront')
+
+const UsersModel = require('../models/Users')
+
+router.get('/', SecretFront, async (req, res) => {
+  try {
+    const users = await UsersModel.getUsers()
+    res.send(users)
+  } catch (e) {
+    res.status(500).json({ message: e.message })
+  }
+})
+
+router.get('/:id', SecretFront, async (req, res) => {
+  try {
+    const users = await UsersModel.getUsersById(req.params.id)
+    res.send(users)
+  } catch (e) {
+    res.status(500).json({ message: e.message })
+  }
+})
+
+module.exports = router
