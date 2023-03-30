@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Form, Button } from "react-bootstrap";
+import api from '../services/api';
 
 import styles from "../styles/Cadastro.module.scss";
 
@@ -7,6 +8,12 @@ export default function Cadastro() {
 
           const [email, setEmail] = useState('');
           const [senha, setSenha] = useState('');
+
+          async function handleSubmit () {
+            await api.post('/api/usuario/postUsers', {email, senha}) 
+            .then(res => {console.log(res)})
+            .catch(err =>{console.log(err)})
+          }
 
           return (
                     <div>
@@ -58,6 +65,7 @@ export default function Cadastro() {
                                                   <Button 
                                                             className={styles.btnColor} 
                                                             type="submit"
+                                                            onClick={() => handleSubmit()}
                                                   > Cadastrar </Button>
                                                   
                                                   <a href='#login' className={styles.textDecoration}> Já possui conta? Entre! </a>
