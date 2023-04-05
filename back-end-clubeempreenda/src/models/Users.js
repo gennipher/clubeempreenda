@@ -1,8 +1,8 @@
-const knex = require('../knex/config/database').knexLogistica
+const knex = require('../knex/config/database')
 
 class Users {
   static getUsers () {
-    const select = knex('Usuario')
+    const select = knex('usuarios')
 
     return select.then(data => {
       return data
@@ -12,7 +12,7 @@ class Users {
   }
 
   static getUsersById (id) {
-    const select = knex('Usuario').where('IDUsuario', id)
+    const select = knex('usuarios').where('idUsuario', id)
 
     return select.then(data => {
       return data

@@ -15,10 +15,10 @@ app.use('/api/usuarios', usersRoute);
 app.use(express.json());
 
 app.get('/', async (req, res) => {
-          const query = await users();
-          return res.status(201).json(query);
+    const query = await users();
+    return res.status(201).json(query);
 });
 
 app.listen(5000, () => {
-          console.log('Servidor rodando na porta', `${port}`)
+    console.log('Servidor rodando na porta', `${port}`)
 });

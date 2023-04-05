@@ -1,10 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const SecretFront = require('../middleware/secretFront')
-
 const UsersModel = require('../models/Users')
 
-router.get('/', SecretFront, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const users = await UsersModel.getUsers()
     res.send(users)
@@ -13,7 +11,7 @@ router.get('/', SecretFront, async (req, res) => {
   }
 })
 
-router.get('/:id', SecretFront, async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const users = await UsersModel.getUsersById(req.params.id)
     res.send(users)
