@@ -19,5 +19,4 @@ const knexClubeEmpreenda = require('knex')({
   }
 })
 
-
-module.exports = {knexClubeEmpreenda}
+module.exports = knexClubeEmpreenda
